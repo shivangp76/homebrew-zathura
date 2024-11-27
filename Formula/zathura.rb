@@ -20,7 +20,7 @@ class Zathura < Formula
   depends_on "libmagic"
   depends_on "synctex" => :optional
   on_macos do
-    depends_on "gtk-mac-integration"
+    depends_on "gtk+3"
   end
 
   def install
