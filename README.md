@@ -23,16 +23,16 @@ brew install zathura --with-synctex
 
 For poppler:
 ```
-$ brew install zathura-pdf-poppler
-$ mkdir -p $(brew --prefix zathura)/lib/zathura
-$ ln -s $(brew --prefix zathura-pdf-poppler)/libpdf-poppler.dylib $(brew --prefix zathura)/lib/zathura/libpdf-poppler.dylib
+brew install zathura-pdf-poppler
+mkdir -p $(brew --prefix zathura)/lib/zathura
+ln -s $(brew --prefix zathura-pdf-poppler)/libpdf-poppler.dylib $(brew --prefix zathura)/lib/zathura/libpdf-poppler.dylib
 ```
 
 For mupdf:
 ```
-$ brew install zathura-pdf-mupdf
-$ mkdir -p $(brew --prefix zathura)/lib/zathura
-$ ln -s $(brew --prefix zathura-pdf-mupdf)/libpdf-mupdf.dylib $(brew --prefix zathura)/lib/zathura/libpdf-mupdf.dylib
+brew install zathura-pdf-mupdf
+mkdir -p $(brew --prefix zathura)/lib/zathura
+ln -s $(brew --prefix zathura-pdf-mupdf)/libpdf-mupdf.dylib $(brew --prefix zathura)/lib/zathura/libpdf-mupdf.dylib
 ```
 
 ### OSX_native_integration
