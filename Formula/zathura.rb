@@ -1,8 +1,8 @@
 class Zathura < Formula
   desc "PDF viewer"
   homepage "https://pwmt.org/projects/zathura/"
-  url "https://github.com/pwmt/zathura/archive/0.5.8.tar.gz"
-  sha256 "bfe3b76605c9e352dbb80bf4e4558b11453b1f1b30263d1dddf3e717897c7db9"
+  url "https://github.com/pwmt/zathura/archive/0.5.9.tar.gz"
+  sha256 "6108bfe87676c0ddc1289dd4278ac8c7ab9e47cb4bb419f71786baa99e14760f"
   revision 0
   head "https://github.com/pwmt/zathura.git", branch: "develop"
 
@@ -21,6 +21,7 @@ class Zathura < Formula
   depends_on "synctex" => :optional
   on_macos do
     depends_on "gtk+3"
+    depends_on "gtk-mac-integration"
   end
 
   def install

@@ -6,12 +6,17 @@ Homebrew formulae to install zathura and plugins on Mac OS X
 
 ### Tap the repository
 ```
-brew tap marc-shen/zathura
+brew tap shivangp76/zathura
 ```
 
 ### Install zathura
 ```
 brew install zathura
+```
+
+With Synctex:
+```
+brew install zathura --with-synctex
 ```
 
 ### Install and link one of the two plugins

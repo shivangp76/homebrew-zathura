@@ -1,8 +1,8 @@
 class ZathuraPdfPoppler < Formula
   desc "Poppler backend plugin for zathura"
   homepage "https://pwmt.org/projects/zathura-pdf-poppler/"
-  url "https://github.com/pwmt/zathura-pdf-poppler/archive/0.3.0.tar.gz"
-  sha256 "2034f70a936d458ddc9276f769e77ff308ba3bb1b7a7cdc87bab8b9ef7ade84a"
+  url "https://github.com/pwmt/zathura-pdf-poppler/archive/0.3.3.tar.gz"
+  sha256 "bff865c712920c64d1393f87811b66bf79909fa7ee82364cf0cde7d5552613ea"
 
   depends_on "cmake" => :build
   depends_on "meson" => :build
@@ -12,7 +12,7 @@ class ZathuraPdfPoppler < Formula
   depends_on "zathura"
 
   def install
-    inreplace "meson.build", "zathura.get_pkgconfig_variable('plugindir')", "prefix"
+    inreplace "meson.build", "zathura.get_variable(pkgconfig: 'plugindir')", "prefix"
     mkdir "build" do
       system "meson", *std_meson_args, ".."
       system "ninja"
