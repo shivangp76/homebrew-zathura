@@ -1,15 +1,16 @@
 class Synctex < Formula
   desc "Parser libary for synctex"
   homepage "https://github.com/jlaurens/synctex"
-  url "https://github.com/jlaurens/synctex", using: :git, revision: "d37a5a59091b6a1bda387e68dd9431a7a750f419", branch: "2024"
+  url "https://github.com/jlaurens/synctex", revision: "d37a5a59091b6a1bda387e68dd9431a7a750f419", branch: "2024"
   version "2024"
-  revision 2
+  # sha256 "2905e22437f8609bb799c98009aab8bc34f9466c629871079d4c8bc6277be1a0"
+  license "MIT"
+  head "https://github.com/jlaurens/synctex.git", branch: "main"
 
-  # bottle do
-  #   root_url "https://github.com/zegervdv/homebrew-zathura/releases/download/synctex-1.22.0_2"
-  #   sha256 cellar: :any,                 big_sur:      "28ecec53683b7cc5bb5686705f8ab9f07517fa790527625c792094a51d4e0b25"
-  #   sha256 cellar: :any_skip_relocation, x86_64_linux: "aaa344cbb93e7794e72da4f97c492a7a89dadc533dbd9639672512aa5d94c9a4"
-  # end
+  livecheck do
+    url :stable
+    regex(/^(\d{4})$/i)
+  end
 
   depends_on "zlib"
 
@@ -40,5 +41,9 @@ Cflags: -I${includedir}/synctex"
 
     mkdir "#{lib}/pkgconfig"
     cp "synctex.pc.in", "#{lib}/pkgconfig/synctex.pc"
+  end
+
+  test do
+    system "true" # TODO
   end
 end

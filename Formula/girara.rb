@@ -1,16 +1,10 @@
 class Girara < Formula
   desc "Interface library"
   homepage "https://pwmt.org/projects/girara/"
-  url "https://github.com/pwmt/girara/archive/0.4.5.tar.gz"
+  url "https://github.com/pwmt/girara/archive/refs/tags/0.4.5.tar.gz"
   sha256 "9abb84fdb3f8f51e8aef8d53488fd0631357f0713ad5aa4a5c755c23f54b23df"
+  license "Zlib"
   head "https://github.com/pwmt/girara.git", branch: "develop"
-
-  # bottle do
-  #   root_url "https://ghcr.io/v2/zegervdv/zathura"
-  #   rebuild 1
-  #   sha256 ventura:      "de3d8697345a2f225cc0ea5b24f78935b8f19062faa847785051d52bea637ea1"
-  #   sha256 x86_64_linux: "a4d3262b78ef8c778dda19e6e078c9fce68b862b51d44470eca325cf26648b2c"
-  # end
 
   depends_on "meson" => :build
   depends_on "ninja" => :build
@@ -25,7 +19,8 @@ class Girara < Formula
 
   def install
     inreplace "girara/utils.c" do |s|
-      s.gsub!(/xdg-open/, "open")
+      # s.gsub!(/xdg-open/, "open")
+      s.gsub!("xdg-open", "open")
     end
     # Set HOMBREW_PREFIX
     ENV["CMAKE_INSTALL_PREFIX"] = prefix
