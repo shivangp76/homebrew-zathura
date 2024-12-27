@@ -1,10 +1,17 @@
 class Zathura < Formula
   desc "PDF viewer"
   homepage "https://pwmt.org/projects/zathura/"
-  url "https://github.com/pwmt/zathura/archive/0.5.9.tar.gz"
+  url "https://github.com/pwmt/zathura/archive/refs/tags/0.5.9.tar.gz"
   sha256 "6108bfe87676c0ddc1289dd4278ac8c7ab9e47cb4bb419f71786baa99e14760f"
-  revision 0
+  # url "https://github.com/pwmt/zathura/archive/refs/tags/0.5.11.tar.gz"
+  # sha256 "32540747a6fe3c4189ec9d5de46a455862c88e11e969adb5bc0ce8f9b25b52d4"
+  license "Zlib"
   head "https://github.com/pwmt/zathura.git", branch: "develop"
+
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
 
   depends_on "cmake" => :build
   depends_on "meson" => :build

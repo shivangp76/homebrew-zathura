@@ -1,8 +1,14 @@
 class ZathuraDjvu < Formula
   desc "DJVU plugin for zathura"
   homepage "https://pwmt.org/projects/zathura-djvu/"
-  url "https://github.com/pwmt/zathura-djvu/archive/0.2.10.tar.gz"
+  url "https://github.com/pwmt/zathura-djvu/archive/refs/tags/0.2.10.tar.gz"
   sha256 "3749fe9da14c5cbd13598c83f2dbff9c1c1d906797139fc809ef256f8075c987"
+  license "Zlib"
+
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
 
   depends_on "cmake" => :build
   depends_on "meson" => :build

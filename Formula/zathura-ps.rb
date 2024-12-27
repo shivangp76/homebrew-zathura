@@ -1,8 +1,14 @@
 class ZathuraPs < Formula
   desc "Postscript backend plugin for zathura"
   homepage "https://pwmt.org/projects/zathura-ps/"
-  url "https://github.com/pwmt/zathura-ps/archive/0.2.6.tar.gz"
+  url "https://github.com/pwmt/zathura-ps/archive/refs/tags/0.2.6.tar.gz"
   sha256 "08c1927bfb8a40e201fa3638f9523d4b6d70e3444ef070bd4aa8a869b6574567"
+  license "Zlib"
+
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
 
   depends_on "cmake" => :build
   depends_on "meson" => :build
