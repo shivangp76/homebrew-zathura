@@ -1,7 +1,7 @@
 class Synctex < Formula
   desc "Parser libary for synctex"
   homepage "https://github.com/jlaurens/synctex"
-  url "https://github.com/jlaurens/synctex", revision: "d37a5a59091b6a1bda387e68dd9431a7a750f419", branch: "2024"
+  url "https://github.com/jlaurens/synctex", using: :git, revision: "d37a5a59091b6a1bda387e68dd9431a7a750f419", branch: "2024"
   version "2024"
   # sha256 "2905e22437f8609bb799c98009aab8bc34f9466c629871079d4c8bc6277be1a0"
   license "MIT"
