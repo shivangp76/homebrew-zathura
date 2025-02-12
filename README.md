@@ -74,5 +74,7 @@ $ zathura /path/to/document.pdf
 ```
 
 ## Known Issues
-Currently plugins are installed in the zathura folder, which means that uninstalling
-a plugin does not work.
+Currently plugins are installed in the zathura folder, which means that uninstalling a plugin does not work. 
+
+Work on frameless windows and an improved app bundle experience are coming in the future.
+
