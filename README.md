@@ -61,6 +61,7 @@ Thanks to [geigi](https://github.com/geigi) (see [#5](https://github.com/zegervd
 ### Operation not supported error
 
 If you are seeing errors like this:
+
 ```sh
 # error: Can not copy to temporary file: Operation not supported
 ```
